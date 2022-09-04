@@ -1,0 +1,307 @@
+@import "Styles/colors";
+@import "Styles/fonts";
+@import "Styles/mixs";
+@import "Styles/res";
+
+.page-master {
+    width: 100vw;
+
+    > nav {
+        background-color: lighten($accent-black-0, 8%);
+    }
+
+    section#agenda {
+        width: 100vw;
+        padding: 5rem 0;
+        @include section-center;
+    
+        .content {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+    
+            .learn {
+                margin-top: 2.5rem;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                
+                @media #{$tablet} {
+                    flex-direction: column;
+                    gap: 3rem;
+                }
+    
+                .card {
+                    width: 28%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    @media #{$laptop} {
+                        width: 30%;
+                    }
+
+                    @media #{$tablet} {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        gap: 0.5rem 1rem;
+                    }
+    
+                    img {
+                        height: 9rem;
+
+                        @media #{$laptop} {
+                            height: 8rem;
+                        }
+
+                        @media #{$tablet} {
+                            grid-row-start: 1;
+                            grid-row-end: 3;
+                        }
+
+                        @media #{$mobile_l} {
+                            height: 5rem;
+                        }
+                    }
+    
+                    h1 {
+                        font-family: $fm-header;
+                        margin-top: 1.5rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: $fs0;
+                        line-height: 2rem;
+                        color: $accent-black-0;
+
+                        @media #{$tablet} {
+                            margin-top: 0;
+                            line-height: 1rem;
+                            align-self: flex-end;
+                        }
+                    }
+    
+                    p {
+                        width: 100%;
+                        margin-top: 1rem;
+                        font-family: $fm-regular;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: $fs0;
+                        line-height: 1.5rem;
+                        color: $accent-gray;
+                        text-align: justify;
+                        text-align-last: center;
+                        hyphens: auto;
+
+                        @media #{$tablet} {
+                            text-align: justify;
+                            text-align-last: left;
+                            margin: 0;
+                            align-self: flex-start;
+                            line-height: 1.8rem;
+                        }
+                    }
+    
+                    &:nth-child(2) {
+                        margin-top: 4rem;
+
+                        @media #{$laptop} {
+                            margin-top: 3rem;
+                        }
+
+                        @media #{$tablet} {
+                            margin-top: 0;
+                            
+                            img {
+                                grid-column-start: 2;
+                                grid-column-end: 3;
+                            }
+
+                            h1 {
+                                text-align: right;
+                            }
+
+                            p {
+                                text-align-last: right;
+                            }
+                        }
+
+                        @media #{$mobile_l} {
+                            img {
+                                grid-column-start: 1;
+                                grid-column-end: 2;
+                            }
+
+                            h1, p {
+                                grid-column-start: 2;
+                                grid-column-end: 3;
+                            }
+
+                            h1 {
+                                text-align: left;
+                            }
+
+                            p {
+                                text-align-last: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#crew {
+        position: relative;
+        width: 100vw;
+        background-color: lighten($accent-white-1, 4%);
+    
+        .container {
+            width: 100vw;
+            padding: 5rem 0;
+            @include section-center;
+    
+            .content {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+        
+                .members {
+                    width: 100%;
+                    margin-top: 3.5rem;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 3rem;
+
+                    @media #{$tablet} {
+                        gap: 2rem;
+                    }
+
+                    @media #{$mobile_l} {
+                        gap: 1rem;
+                        grid-template-columns: 1fr;
+                    }
+        
+                    .card {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        padding: 2rem 1rem;
+                        border-radius: 0.5rem;
+                        box-shadow: 0 4px 10px $accent-dark-shadow-1;
+                        background-color: $accent-white-0;
+
+                        @media #{$laptop} {
+                            flex-direction: column;
+                            align-items: center;
+                        }
+        
+                        img {
+                            height: 9rem;
+                            aspect-ratio: 1/1;
+                            border-radius: 50%;
+                            object-fit: contain;
+                        }
+        
+                        .info {
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 30px;
+                            gap: 0.5rem;
+                            
+                            @media #{$laptop} {
+                                align-items: center;
+                                margin: 0;
+                                margin-top: 0.5rem;
+                                gap: 0.8rem;
+                            }
+        
+                            h1 {
+                                font-family: $fm-header;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: $fs1;
+                                line-height: 136%;
+                                color: #000000;
+                            }
+        
+                            h2 {
+                                font-family: $fm-regular;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 1rem;
+                                line-height: 1rem;
+                                color: #359756;
+                            }
+        
+                            p {
+                                text-align: left;
+                                width: 100%;
+                                font-style: italic;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 1.5rem;
+                                color: #7F7F7F;
+
+                                @media #{$laptop} {
+                                    text-align: center;
+                                    line-height: 1.8rem;
+                                }
+                            }
+        
+                            .social {
+                                display: flex;
+                                gap: 4px;
+                                img {
+                                    width: 24px;
+                                    height: 24px;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+    
+            .rect1 {
+                width: 0.8rem;
+                height: 250px;
+                position: absolute;
+                top: 300px;
+                left: 0;
+                background-color: #2DCC70;
+            }
+    
+            .rect2 {
+                width: 0.8rem;
+                height: 250px;
+                position: absolute;
+                bottom: 300px;
+                right: 0;
+                background-color: #2DCC70;
+            }
+
+            .rect1 , .rect2 {
+                @media #{$mobile_l} {
+                    width: 0.5rem;
+                }
+            }
+        }
+    }
+}

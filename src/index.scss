@@ -1,0 +1,90 @@
+@import "Styles/mixs";
+@import "Styles/fonts";
+@import "Styles/res";
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap");
+
+* {
+    font-family: "Poppins";
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+    @include no-select;
+    // border: 1px solid brown;
+}
+
+html,
+body {
+    font-size: 1rem;
+    font-size: clamp(
+        1rem,
+        0.9642857142857143rem + 0.17857142857142858vw,
+        1.125rem
+    );
+}
+
+html {
+    width: 100vw;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    width: 100vw;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &::before {
+        content: "";
+        position: fixed;
+        bottom: 24px;
+        left: 24px;
+        z-index: 10;
+        text-align: center;
+        padding: 12px 24px;
+        color: white;
+        font-weight: 700;
+        letter-spacing: 4px;
+
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        // border: 1px solid rgba(42, 53, 81, 0.3);
+
+        @media #{$d4k} {
+            content: "d4k";
+        }
+        @media #{$laptop_l} {
+            content: "laptop_l";
+        }
+        @media #{$laptop} {
+            content: "laptop";
+        }
+        @media #{$tablet} {
+            content: "tablet";
+        }
+        @media #{$mobile_l} {
+            content: "mobile_l";
+        }
+        @media #{$mobile_m} {
+            content: "mobile_m";
+        }
+        @media #{$mobile_s} {
+            content: "mobile_s";
+        }
+    }
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}

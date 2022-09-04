@@ -1,0 +1,46 @@
+@import "Styles/fonts";
+@import "Styles/colors";
+@import "Styles/res";
+
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+    @media #{$mobile_l} {
+        width: 90%;
+    }
+
+    > h1 {
+        font-family: $fm-header;
+        font-size: $fs5;
+        font-weight: 400;
+        color: $accent-black-2;
+        text-align: center;
+
+        @media #{$mobile_l} {
+            font-size: $fs2;
+        }
+
+        > span {
+            font-family: $fm-header;
+            font-size: $fs5;
+            font-weight: 400;
+            color: darken($accent-green, 10%);
+
+            @media #{$mobile_l} {
+                font-size: $fs4;
+            }
+        }
+    }
+
+    >h2 {
+        font-family: $fm-regular;
+        font-size: $fs0;
+        font-weight: 300;
+        color: $accent-white-4;
+        line-height: 150%;
+        margin-top: 1.5rem;
+    }
+}

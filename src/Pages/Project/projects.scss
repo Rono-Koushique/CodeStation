@@ -1,0 +1,73 @@
+@import "Styles/vars";
+
+$project-width: 524px;
+$project-height: 310px;
+
+section#projects-page {
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .content {
+        width: 1066px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .platforms {
+            display: flex;
+            flex-direction: row;
+
+            .platform-pill {
+                padding: 4px 8px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                color: #1F2732;
+            }
+        }
+
+        .categories {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 760px;
+            justify-content: center;
+            gap: 8px;
+
+            .category-pill {
+                padding: 8px 20px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.065em;
+                text-transform: uppercase;
+                color: #7F7F7F;
+                border: 1px solid #7F7F7F;
+                cursor: pointer;
+            }
+        }
+
+        .projects {
+            margin-top: 72px;
+            display: grid;
+            grid-template-columns: auto auto;
+            width: 100%;
+            gap: 20px;
+
+            .card {
+                box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.15);
+                width: 100%;
+                img {
+                    // width: $project-width;
+                    width: 100%;
+                    height: $project-height;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import "Styles/res";
+
+@mixin no-select {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+@mixin center-absolute {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin section-title-center {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+@mixin section-center {
+    width: min(80%, 1224px);
+    margin: 0 auto;
+
+    @media #{$laptop} {
+        width: 85%;
+    }
+
+    @media #{$tablet} {
+        width: 90%;
+    }
+}

@@ -1,0 +1,65 @@
+@import "Styles/vars";
+
+$card-width: 336px;
+$card-bg: #F1F1F1;
+$card-content-pd: 30px 40px;
+
+section#services-page {
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .content {
+        width: 1066px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: 40px;
+        justify-content: space-between;
+
+        .card {
+            width: $card-width;
+            background-color: $card-bg;
+            
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: $card-content-pd;
+                gap: 16px;
+
+                h1 {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: fs(large2);
+                    line-height: 36px;
+                    color: color(text2);
+                }
+
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 177.5%;
+                    text-align: center;
+                    color: #4D4D4D;
+                }
+
+                h2 {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: 1px;
+                    color: #359756;
+                }
+            }
+        }
+    }
+}

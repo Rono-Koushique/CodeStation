@@ -1,0 +1,164 @@
+@import "Styles/colors";
+@import "Styles/mixs";
+@import "Styles/fonts";
+@import "Styles/res";
+
+section#hero {
+    position: relative;
+    width: 100vw;
+
+    > .container {
+        width: 100%;
+        padding-top: 7rem;
+        padding-bottom: 5rem;
+
+        @media #{$mobile_l} {
+            // padding-top: 8rem;
+            // padding-bottom: 6rem;
+            padding: 0;
+            // padding-top: 1rem;
+            // height: 100vh;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            width: min(75%, 1440px);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @media #{$laptop} {
+                width: 80%;
+            }
+
+            @media #{$tablet} {
+                width: 85%;
+            }
+
+            @media #{$mobile_l} {
+                width: 90%;
+                height: 100vh;
+                padding-bottom: 2rem;
+            }
+    
+            h1 {
+                color: $accent-green;
+                font-family: $fm-header;
+                font-size: $fs10;
+                font-weight: 900;
+                text-transform: capitalize;
+                line-height: 120%;
+                text-shadow: 0px 0px 20px ligten($accent-green, 10%);
+                text-align: center;
+
+                @media #{$laptop} {
+                    font-size: $fs9;
+                }
+
+                @media #{$mobile_l} {
+                    font-size: $fs7;
+                    line-height: 130%;
+                    // text-align: left;
+                }
+
+                @media #{$mobile_s} {
+                    font-size: $fs6;
+                }
+            }
+    
+            p {
+                font-family: $fm-regular;
+                font-size: $fs0;
+                color: $accent-white-2;
+                width: min(38rem, 70%);
+                line-height: 250%;
+                letter-spacing: 1px;
+                text-align: center;
+                margin-top: 3rem;
+
+                @media #{$laptop} {
+                    width: 80%;
+                    line-height: 230%;
+                }
+
+                @media #{$mobile_l} {
+                    width: 100%;
+                    // text-align: justify;
+                    line-height: 210%;
+                    word-spacing:-0px;
+                }
+            }
+    
+            button {
+                // padding: 1rem 2rem;
+                // border-radius: 50px;
+                background-color: $accent-dark-shadow-0;
+                padding: 1rem 2rem;
+                border-radius: 100% 100% 100% 100%;
+                border: 2px solid $accent-green;
+
+                // background: rgba(38, 172, 107, 0.3);
+                // border: none;
+                // border-radius: 16px;
+                // backdrop-filter: blur(6.5px);
+                
+                color: $accent-green;
+                // color: black;
+                font-size: 0.9rem;
+                font-weight: 500;
+                letter-spacing: 2px;
+                cursor: pointer;
+                text-transform: uppercase;
+                width: fit-content;
+                transition-duration: 0.5s;
+                margin-top: 3rem;
+
+                @media #{$mobile_l} {
+                    margin-top: 3rem;
+                    border-radius: 50px;
+                }
+    
+                &:hover {
+                    padding: 1rem 2.5rem;
+                    background-color: $accent-green;
+                    color: $accent-black-0;
+                    font-weight: 500;
+                    letter-spacing: 3px;
+                }
+            }
+        }
+
+        > .bg {
+            width: 100%;
+            z-index: -1;
+            height: auto;
+    
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100vw;
+                object-fit: cover;
+                filter: brightness(0.4) saturate(1.5);
+            }
+    
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: calc(100% + 3px);
+                width: 100vw;
+                mix-blend-mode: screen;
+                object-fit: fill;
+
+                @media #{$tablet} {
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
